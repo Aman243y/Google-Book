@@ -1,0 +1,31 @@
+<!-- src/app/book-search/book-search.component.html -->
+<input  placeholder="Enter book title" />
+<button (click)="search()">Search</button>
+
+<div *ngIf="books">
+
+
+  </div>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Publisher</th>
+      <th scope="col">Published Dtae</th>
+      <th scope="col">description</th>
+    </tr>
+  </thead>
+ <tr *ngFor="let book of books.items">
+  <td>    {{ book.volumeInfo.title }}  </td>
+  <td>        {{ book.volumeInfo.publisher }}  </td>
+
+  <td>   {{ book.volumeInfo.publishedDate }} </td>
+
+  <td>     {{ book.volumeInfo.description }} </td>
+
+
+ </tr>
+</table>
+
